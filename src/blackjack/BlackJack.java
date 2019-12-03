@@ -17,10 +17,15 @@ public class BlackJack {
         Scanner scanner = new Scanner(System.in);
         String nickname;
         String input;
+        int rounds;
         //ask for nickname
         System.out.println("What nickname would you like to have?");
         input = scanner.nextLine();
         nickname = input;
+        System.out.println("How many rounds do you want to play?");
+        rounds = scanner.nextInt();
+        
+        for (int i=0; i <= rounds-1; i++) {
         //main loop
         do {
             //new game message
@@ -108,13 +113,24 @@ public class BlackJack {
                     }
                     gameOver = true;
                 }
+            }if(rounds == i){
+                break;
+            
             }
-            //ask for a new game
-            System.out.println();
-            System.out.println("Would you like to start a new game? 'Yes/No' :");
-            do {
-                input = scanner.nextLine();
-            } while (!input.equalsIgnoreCase("Yes") && !input.equalsIgnoreCase("No"));
-        } while (input.equalsIgnoreCase("Yes")); 
-    }
+        }while (rounds==i);{
+            System.out.println("You have played "+rounds+" rounds");
+            
+            }
+        
+        }
+    }   
 }
+
+                
+        
+        
+            
+            
+        
+    
+
